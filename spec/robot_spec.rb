@@ -7,6 +7,11 @@ RSpec.describe Toyrobot::Robot do
     it "shows the robot's current position" do
       expect(subject.report).to eql "0,0,NORTH"
     end
+
+    it "calculates next step without moving" do
+      expect(subject.next_move).to eq([0,1])
+      expect(subject.report).to eql "0,0,NORTH"
+    end
   
   end
 

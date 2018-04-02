@@ -1,5 +1,6 @@
 require "toyrobot/version"
 require "toyrobot/robot"
+require "toyrobot/simulation"
 require "toyrobot/table"
 
 module Toyrobot

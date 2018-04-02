@@ -30,5 +30,14 @@ module Toyrobot
       when "EAST" then @direction = "NORTH"
       end
     end
+
+    def right
+      case @direction
+      when "NORTH" then @direction = "EAST"
+      when "WEST" then @direction = "NORTH"
+      when "SOUTH" then @direction = "WEST"
+      when "EAST" then @direction = "SOUTH"
+      end
+    end
   end
 end

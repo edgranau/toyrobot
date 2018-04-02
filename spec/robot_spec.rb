@@ -29,6 +29,11 @@ RSpec.describe Toyrobot::Robot do
       subject.left
       expect(subject.report).to eql "0,0,WEST"
     end
+
+    it "turns RIGHT, faces EAST" do
+      subject.right
+      expect(subject.report).to eql "0,0,EAST"
+    end
   end
 
   context("when facing SOUTH") do
@@ -42,6 +47,11 @@ RSpec.describe Toyrobot::Robot do
     it "turns LEFT, faces EAST" do
       subject.left
       expect(subject.report).to eql "0,1,EAST"
+    end
+
+    it "turns RIGHT, faces WEST" do
+      subject.right
+      expect(subject.report).to eql "0,1,WEST"
     end
   end
 
@@ -57,6 +67,11 @@ RSpec.describe Toyrobot::Robot do
       subject.left
       expect(subject.report).to eql "0,0,NORTH"
     end
+
+    it "turns RIGHT, faces SOUTH" do
+      subject.right
+      expect(subject.report).to eql "0,0,SOUTH"
+    end
   end
 
   context("when facing WEST") do
@@ -70,6 +85,11 @@ RSpec.describe Toyrobot::Robot do
     it "turns LEFT, faces SOUTH" do
       subject.left
       expect(subject.report).to eql "1,0,SOUTH"
+    end
+
+    it "turns RIGHT, faces NORTH" do
+      subject.right
+      expect(subject.report).to eql "1,0,NORTH"
     end
   end
 end

@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Edwin Granados"]
   spec.email         = ["edgranau@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = "Implementation of the Toy Robot coding challenge"
+  spec.description   = "Implementation of the Toy Robot coding challenge"
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 

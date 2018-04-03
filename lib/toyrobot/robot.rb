@@ -7,6 +7,21 @@ module Toyrobot
       "SOUTH" => [0,-1],
       "WEST"  => [-1,0]
     }
+
+    LEFT = {
+      "NORTH" => "WEST",
+      "EAST"  => "NORTH",
+      "SOUTH" => "EAST",
+      "WEST"  => "SOUTH"
+    }
+
+    RIGHT = {
+      "NORTH" => "EAST",
+      "EAST"  => "SOUTH",
+      "SOUTH" => "WEST",
+      "WEST"  => "NORTH"
+    }
+
     attr_reader :x, :y, :direction
     
     def initialize(x = -1, y = -1, direction = 'N/A')
@@ -28,21 +43,11 @@ module Toyrobot
     end
 
     def left
-      case @direction
-      when "NORTH" then @direction = "WEST"
-      when "WEST" then @direction = "SOUTH"
-      when "SOUTH" then @direction = "EAST"
-      when "EAST" then @direction = "NORTH"
-      end
+      @direction = LEFT["#{@direction}"]
     end
 
     def right
-      case @direction
-      when "NORTH" then @direction = "EAST"
-      when "EAST" then @direction = "SOUTH"
-      when "SOUTH" then @direction = "WEST"
-      when "WEST" then @direction = "NORTH"
-      end
+      @direction = RIGHT["#{@direction}"]
     end
   end
 end

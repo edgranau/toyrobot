@@ -18,6 +18,7 @@ module Toyrobot
 
     def move
       return unless robot_on_the_table?
+      return unless table.is_valid_position?(*@robot.next_move)
       @robot.move
     end
 

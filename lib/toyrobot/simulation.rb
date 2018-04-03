@@ -36,6 +36,9 @@ module Toyrobot
       !@robot.nil?
     end
 
+    def invalid_command
+    end
+
     private
 
     def is_valid_direction?(direction)

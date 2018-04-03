@@ -22,7 +22,7 @@ module Toyrobot
       "WEST"  => "NORTH"
     }
 
-    def initialize(x = -1, y = -1, direction = 'N/A')
+    def initialize(x, y, direction)
       @x = x
       @y = y
       @direction = direction

@@ -1,12 +1,12 @@
 module Toyrobot
   class Simulation
-    attr_reader :table, :robot
+
     def initialize(table)
       @table = table
     end
 
     def place(x,y,direction)
-      if(table.is_valid_position?(x,y) && is_valid_direction?(direction)) 
+      if(@table.is_valid_position?(x,y) && is_valid_direction?(direction)) 
         @robot = Robot.new(x,y,direction) 
       end
     end
@@ -18,7 +18,7 @@ module Toyrobot
 
     def move
       return unless robot_on_the_table?
-      return unless table.is_valid_position?(*@robot.next_move)
+      return unless @table.is_valid_position?(*@robot.next_move)
       @robot.move
     end
 

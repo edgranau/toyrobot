@@ -1,5 +1,6 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 # Specify your gem's dependencies in toyrobot.gemspec
 gemspec
-gem 'simplecov', :require => false, :group => :test
+gem 'rubocop', require: false, :group => :test
+gem 'simplecov', require: false, :group => :test

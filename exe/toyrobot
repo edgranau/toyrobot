@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'toyrobot'
+
+cli = Toyrobot::CLI.new(ARGV[0])
+cli.run

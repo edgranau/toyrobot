@@ -79,40 +79,43 @@ We're not just looking for any old solution that would solve the problem. We're 
 
 Basically treat the coding test as if it's part of a larger problem.
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'toyrobot'
-```
-
-And then execute:
+## Test it
 
 ```bash
-bundle
+bundle exec rspec
+# ...
+# Finished in 0.01275 seconds (files took 0.13895 seconds to load)
+# 45 examples, 0 failures
+
+# Coverage report generated for RSpec to ./coverage. 199 / 199 LOC (100.0%) covered.
 ```
 
-Or install it yourself as:
+## Install it locally
 
 ```bash
-gem install toyrobot
+bundle exec rake install
+# toyrobot 0.1.0 built to pkg/toyrobot-0.1.0.gem.
+# toyrobot (0.1.0) installed.
 ```
 
-## Usage
+## Use it
 
-TODO: Write usage instructions here
+```bash
+exe/toyrobot spec/fixtures/commands1.txt
+# 0,1,NORTH
+exe/toyrobot spec/fixtures/commands2.txt
+# 0,0,WEST
+exe/toyrobot spec/fixtures/commands3.txt
+# 3,3,NORTH
+exe/toyrobot spec/fixtures/commands4.txt
+# 0,0,NORTH
+exe/toyrobot spec/fixtures/commands5.txt
+# 4,4,EAST
+```
 
-## Development
+## Cleanup
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on [GitHub](https://github.com/edgranau/toyrobot).
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+```bash
+gem uninstall toyrobot
+# Successfully uninstalled toyrobot-0.1.0
+```

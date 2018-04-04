@@ -1,6 +1,5 @@
 module Toyrobot
   class CLI
-
     def initialize(filename)
       @filename = filename
       @table = Table.new
@@ -9,7 +8,7 @@ module Toyrobot
     end
 
     def run
-      File.open(@filename,'r').each { |line| run_command line }
+      File.open(@filename, 'r').each { |line| run_command line }
     end
 
     private
@@ -17,6 +16,5 @@ module Toyrobot
     def run_command(line)
       @simulation.send(*@command.parse(line))
     end
-
   end
 end
